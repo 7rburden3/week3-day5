@@ -18,8 +18,9 @@ CREATE TABLE customers (
 CREATE TABLE screenings (
   id SERIAL4 PRIMARY KEY,
   -- don't use "time" as column title as it is a sql keyword
-  starts_at CHAR(5),
-  seats INT2
+  starts_at TIMESTAMP,
+  seats INT2,
+  film_id INT4 REFERENCES films(id) ON DELETE CASCADE
 );
 
 CREATE TABLE tickets (
