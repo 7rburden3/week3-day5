@@ -1,4 +1,5 @@
 DROP TABLE tickets;
+DROP TABLE screenings;
 DROP TABLE customers;
 DROP TABLE films;
 
@@ -12,6 +13,13 @@ CREATE TABLE customers (
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   funds INT4
+);
+
+CREATE TABLE screenings (
+  id SERIAL4 PRIMARY KEY,
+  -- don't use "time" as column title as it is a sql keyword
+  starts_at CHAR(5),
+  seats INT2
 );
 
 CREATE TABLE tickets (

@@ -81,13 +81,24 @@ ticket6 = Ticket.new({
 ticket6.save()
 
 # p Film.all()
+
 # p Customer.all()
+
 # film3.title = 'Harry Potter and the Even More Implausible Coincidences'
+
 # p film3.update()
+
 # p customer2.films()
+
 # p film2.customers()
+
 # p customer1.tickets()
-p film3.tickets()
+
+# p film3.tickets()
+
+# p customer1.funds()
+# customer1.pay_for_ticket(film1)
+# p customer1.funds()
 
 binding.pry
 nil

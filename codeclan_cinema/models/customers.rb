@@ -47,12 +47,18 @@ class Customer
     return Film.map_items(film_data)
   end
 
-
+  # select all from tickets by given customer id return the count of the customer objects created to give the number of tickets bought by that customer.
   def tickets()
     sql = "SELECT * FROM tickets WHERE customer_id = $1;"
     values = [@id]
     tickets = SqlRunner.run(sql, values)
     return Ticket.map_items(tickets).count
+  end
+
+  def pay_for_ticket(ticket)
+    return if @funds < ticket.price
+    @funds -= ticket.price
+    update
   end
 
 

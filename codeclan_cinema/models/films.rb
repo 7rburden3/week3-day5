@@ -37,16 +37,7 @@ class Film
     SqlRunner.run(sql, values)
   end
 
-  # def customers()
-  #   sql = "SELECT customers.*
-  #   FROM customers
-  #   INNER JOIN tickets
-  #   ON tickets.customer_id = customers.id
-  #   WHERE tickets.film_id = $1;"
-  #   values = [@id]
-  #   customer_data = SqlRunner.run(sql, values)
-  #   return Customer.map_items(customer_data)
-  # end
+  # select all from tickets by film id. return the count of the objects created to find number of tickets sold for the film
   def tickets()
     sql = "SELECT * FROM tickets WHERE film_id = $1;"
     values = [@id]
