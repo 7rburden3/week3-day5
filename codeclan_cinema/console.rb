@@ -85,7 +85,8 @@ ticket6.save()
 # film3.title = 'Harry Potter and the Even More Implausible Coincidences'
 # p film3.update()
 # p customer2.films()
-p film2.customers()
+# p film2.customers()
+p customer1.tickets()
 
 binding.pry
 nil

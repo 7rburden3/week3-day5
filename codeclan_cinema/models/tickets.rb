@@ -49,12 +49,10 @@ class Ticket
     return Ticket.map_items(ticket_data)
   end
 
-  # def self.all()
-  #   sql = "SELECT * FROM movies"
-  #   movie_data = SqlRunner.run(sql)
-  #   return Movie.map_items(movie_data)
-  # end
-
+  def self.map_items(data)
+    result = data.map { |ticket| Ticket.new(ticket) }
+    return result
+  end
 
 
 end # end class
