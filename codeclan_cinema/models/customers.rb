@@ -47,12 +47,6 @@ class Customer
     return Film.map_items(film_data)
   end
 
-  # def films()
-  #   sql = "SELECT films.* FROM customers INNER JOIN tickets ON customers.id = tickets.customer_id INNER JOIN screenings ON screenings.id = tickets.screening_id INNER JOIN films ON films.id = screenings.film_id WHERE tickets.customer_id = $1;"
-  #   values = [@id]
-  #   films = SqlRunner.run(sql, values)
-  #   return Film.map_films(films)
-  # end
 
   def tickets()
     sql = "SELECT * FROM tickets WHERE customer_id = $1;"

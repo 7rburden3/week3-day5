@@ -86,7 +86,8 @@ ticket6.save()
 # p film3.update()
 # p customer2.films()
 # p film2.customers()
-p customer1.tickets()
+# p customer1.tickets()
+p film3.tickets()
 
 binding.pry
 nil
